@@ -81,9 +81,11 @@
                   <textarea name="catatan" class="form-control" placeholder="Catatan (opsional)"></textarea>
                 </div>
                 
-                <button type="submit" class="btn btn-success" id="waBtn">
-                  Kirim Pesanan ke WhatsApp
+                <!-- Tombol Kirim: Ubah ID & biarkan form tetap submit -->
+                <button type="submit" class="btn btn-success">
+                  Kirim Pesanan
                 </button>
+
                 
                 
                 </div>

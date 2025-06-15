@@ -7,17 +7,13 @@
 
                 <div class="col-lg-3 col-md-6 footer-contact">
                     <a href="/"><img src="{{ asset('assets/img/ABAHHH.png') }}" alt="mbah-jiwo" class="img-fluid"></a>
-                    <h3 class="mt-3"><b>Abah Beras</b></h3>
                     <p>
-                        Kelola stok, monitor penjualan, dan atur keuangan dengan lebih mudah dan efisien. <br>
+                        Pencarian beras lebih mudah dan praktis, tinggal duduk saja di rumah. <br>
                     </p>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Layanan Kami</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('inventory') }}">Inventory</a></li>
-                    </ul>
+                    <h4>Terima Kasih Atas Kepercayaan Anda</h4>
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">

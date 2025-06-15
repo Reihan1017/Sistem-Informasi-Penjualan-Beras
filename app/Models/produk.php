@@ -9,13 +9,15 @@ class Produk extends Model
 {
     use HasFactory;
 
-    // Sesuaikan dengan nama tabel yang ada
     protected $table = "listproduks";
 
     protected $fillable = [
-        'jenis_beras',
-        'harga_jual',
-        'kategori',
-        'jumlah_stok',
+        'nama_produk',
+        'harga',
     ];
+
+    public function pesanan()
+    {
+        return $this->hasMany(Pesanan::class, 'produk_id');
+    }
 }

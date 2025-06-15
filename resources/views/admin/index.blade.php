@@ -1,5 +1,5 @@
 @extends('admin.admin_master')
-@section('admin')
+@section('content')
         <!-- row  -->
         <div class="row">
           <div class="col-md-12">

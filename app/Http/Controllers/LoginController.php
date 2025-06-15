@@ -21,7 +21,6 @@ class LoginController extends Controller
 
     public function authenticate(Request $request): RedirectResponse
     {
-
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -29,11 +28,15 @@ class LoginController extends Controller
         
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+    
+            // Redirect langsung ke dashboard
+            return redirect()->route('dashboard');
         }
- 
+    
         return back()->with('loginError', 'Login failed. Please try again.');
     }
+    
+    
 
     public function logout(Request $request)
     {

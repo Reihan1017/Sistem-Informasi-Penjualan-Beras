@@ -62,7 +62,10 @@
   
     @yield('container')
 
+    @if (!Request::is('login') && !Request::is('contact-us'))
     @include('partials.footer')
+@endif
+
 
     @yield('scripts')
 </body>

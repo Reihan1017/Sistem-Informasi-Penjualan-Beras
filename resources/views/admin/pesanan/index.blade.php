@@ -1,28 +1,48 @@
-@extends('layouts.admin') {{-- sesuaikan dengan layout kamu --}}
+@extends('admin.admin_master')
 
 @section('content')
 <h2>Catatan Pemesanan</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nama</th>
-            <th>Alamat</th>
-            <th>No HP</th>
-            <th>Catatan</th>
-            <th>Tanggal</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach ($data as $pesanan)
+<div class="container-fluid">
+    <h3 class="mt-4">Data Pesanan</h3>
+    <div class="card mt-3">
+      <div class="card-body">
+        <table class="table table-bordered">
+          <thead>
             <tr>
-                <td>{{ $pesanan->nama }}</td>
-                <td>{{ $pesanan->alamat }}</td>
-                <td>{{ $pesanan->no_hp }}</td>
-                <td>{{ $pesanan->catatan }}</td>
-                <td>{{ $pesanan->created_at->format('d-m-Y H:i') }}</td>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Telepon</th>
+              <th>Alamat</th>
+              <th>Produk</th>
+              <th>Jumlah</th>
+              <th>Harga</th>
+              <th>Total</th>
+              <th>Catatan</th>
+              <th>Waktu</th>
             </tr>
-        @endforeach
-    </tbody>
-</table>
+          </thead>
+          <tbody>
+            @foreach ($data as $item)
+            <tr>
+              <td>{{ $loop->iteration }}</td>
+              <td>{{ $item->nama }}</td>
+              <td>{{ $item->telepon }}</td>
+              <td>{{ $item->alamat }}</td>
+              <td>{{ $item->produk->nama_produk ?? '-' }}</td>
+              <td>{{ $item->jumlah }}</td>
+              <td>Rp {{ number_format($item->harga, 0, ',', '.') }}</td>
+              <td>Rp {{ number_format($item->total, 0, ',', '.') }}</td>
+              <td>{{ $item->catatan }}</td>
+              <td>{{ $item->created_at->format('d-m-Y H:i') }}</td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+        <div class="mt-3">
+          {{ $data->links() }} {{-- Untuk pagination --}}
+        </div>
+      </div>
+    </div>
+  </div>
 @endsection

@@ -10,7 +10,10 @@ class PesananController extends Controller
 {
     public function index()
     {
-        $data = Pesanan::latest()->paginate(10);
+        $data = Pesanan::all(); // atau pakai paginate() kalau mau paging
         return view('admin.pesanan.index', compact('data'));
     }
 }
+
+
+

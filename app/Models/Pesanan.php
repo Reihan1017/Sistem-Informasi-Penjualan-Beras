@@ -15,8 +15,11 @@ class Pesanan extends Model
         'alamat',
         'produk_id',
         'jumlah',
+        'harga',
+        'total',
         'catatan',
-    ];
+    ];    
+    
 
     public function produk()
     {

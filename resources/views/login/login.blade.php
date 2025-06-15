@@ -50,23 +50,6 @@
                             <!-- Tambahkan kelas "text-center" -->
                             <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
                         </div>
-
-                        <div class="text-center mt-3 mb-3">
-                            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-                        </div>
-
-                        <div class="text-center mb-5">
-                            <!-- Tambahkan kelas "text-center" -->
-                            <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998"
-                                href="{{ route('google-login') }}" role="button">
-                                <i class="bi bi-google" style="color: #ffffff;"></i> Continue with Google
-                            </a>
-                        </div>
-
-                        <div class="text-center">
-                            <p>Don't have an account? <a href="{{ route('register') }}">Register</a></p>
-                        </div>
-
                     </form>
                 </div>
             </div>

@@ -1,5 +1,4 @@
-<p align="center"><a href="https://mbahjiwo.com" target="_blank"><img src="https://github.com/farisfaikar/mbah-jiwo/assets/87220004/05e3285d-f757-461d-a446-fe1d424f88cb" width="100" alt="Laravel Logo"></a></p>
-<h1 align="center">Mbah Jiwo</h1>
+
 
 <p align="center">
 <a href="https://github.com/farisfaikar/mbah-jiwo"><img src="https://img.shields.io/github/stars/farisfaikar/mbah-jiwo.svg?style=social" alt="Stars"></a>
